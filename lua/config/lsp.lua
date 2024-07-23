@@ -11,9 +11,10 @@ require('mason-lspconfig').setup {
 			if server.setup then
 				server.setup({
 					on_attach = function()
-						vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {buffer=0})
+						vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, {buffer=0})
 						vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {buffer=0})
-						vim.keymap.set('n', 'gt', vim.lsp.buf.type_definition, {buffer=0})
+						vim.keymap.set('n', '<leader>gt', vim.lsp.buf.type_definition, {buffer=0})
+						vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {buffer=0})
 					end
 				})
 			end
