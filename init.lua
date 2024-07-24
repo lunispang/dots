@@ -1,9 +1,9 @@
 require('config.remap')
 require('config.opts')
 
-require('config.telescope')
-
 require('config.lazy')
+
+require('config.telescope')
 
 require('config.theme')
 require('which-key')
