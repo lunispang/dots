@@ -1,7 +1,6 @@
 require('mason').setup()
 require('mason-lspconfig').setup {
 	ensure_installed = {
-		'csharp_ls',
 		'rust_analyzer',
 		'lua_ls'
 	},
