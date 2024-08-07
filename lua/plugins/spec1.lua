@@ -2,7 +2,7 @@ return {
 	{ 'neovim/nvim-lsp' },
 	{ 'williamboman/mason.nvim' },
 	{ 'williamboman/mason-lspconfig.nvim' },
-	{ 'neovim/nvim-lspconfig' },
+	{ 'neovim/nvim-lspconfig', lazy = true },
 	{ 'nvim-treesitter/nvim-treesitter' },
 	{ 'hrsh7th/nvim-cmp' },
 	{ 'hrsh7th/cmp-nvim-lsp' },
@@ -59,5 +59,4 @@ return {
 		end,
 	},
 	{ 'mfussenegger/nvim-dap' },
-	{ 'mrcjkb/rustaceanvim' }
 }
