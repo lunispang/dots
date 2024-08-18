@@ -2,7 +2,6 @@ return {
 	{ 'neovim/nvim-lsp' },
 	{ 'williamboman/mason.nvim' },
 	{ 'williamboman/mason-lspconfig.nvim' },
-	{ 'neovim/nvim-lspconfig', lazy = true },
 	{ 'nvim-treesitter/nvim-treesitter' },
 	{ 'hrsh7th/nvim-cmp' },
 	{ 'hrsh7th/cmp-nvim-lsp' },
@@ -11,10 +10,15 @@ return {
 	{ 'hrsh7th/cmp-vsnip' },
 	{ 'hrsh7th/vim-vsnip' },
 
+	{ "neovim/nvim-lspconfig" },
+
 	{ 'folke/tokyonight.nvim' },
 	{ 'folke/which-key.nvim' },
+	{ 'folke/trouble.nvim' },
 
 	{ 'nvim-telescope/telescope.nvim' },
+
+	{ 'ThePrimeagen/harpoon', branch = 'harpoon2', dependencies = { 'nvim-lua/plenary.nvim', 'nvim-telescope/telescope.nvim' }, opts = {}},
 
 	{
 		"mrcjkb/rustaceanvim",

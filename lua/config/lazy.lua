@@ -25,7 +25,8 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
 	spec = {
 		-- import your plugins
-		{ "LazyVim/LazyVim", import = "lazyvim.plugins.extras.lang.rust" },
+		{ "LazyVim/LazyVim" },
+		-- { import = "lazyvim.plugins.extras.lang.rust" },
 		{ import = "plugins" },
 	},
 	-- Configure any other settings here. See the documentation for more details.

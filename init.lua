@@ -7,6 +7,8 @@ require('config.telescope')
 
 require('config.theme')
 require('which-key')
+require('config.trouble')
+require('config.harpoon')
 
 require('config.cmp')
 require('config.lsp')
