@@ -20,6 +20,8 @@ return {
 
 	{ 'ThePrimeagen/harpoon', branch = 'harpoon2', dependencies = { 'nvim-lua/plenary.nvim', 'nvim-telescope/telescope.nvim' }, opts = {}},
 
+	{ 'stevearc/oil.nvim' },
+
 	{
 		"mrcjkb/rustaceanvim",
 		version = "^4", -- Recommended

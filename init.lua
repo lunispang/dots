@@ -7,6 +7,7 @@ require('config.telescope')
 
 require('config.theme')
 require('which-key')
+require('oil').setup()
 require('config.trouble')
 require('config.harpoon')
 
