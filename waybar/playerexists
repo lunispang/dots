@@ -1,0 +1,5 @@
+#!/bin/sh
+str=$(playerctl status)
+if [[ $str == P* ]] then
+    echo 'true';
+fi
