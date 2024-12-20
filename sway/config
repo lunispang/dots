@@ -18,8 +18,8 @@ exec_always --no-startup-id "killall bash watchdog; bash ~/.config/sway/watchdog
 
 exec --no-startup-id nm-applet
 
-output HDMI-A-4 bg $(find ~/backgrounds -type f | shuf -n 1) fill
-output DP-4 bg $(find ~/backgrounds -type f | shuf -n 1) fill
+output HDMI-A-4 bg $(find ~/backgrounds/ -type f | shuf -n 1) fill
+output DP-4 bg $(find ~/backgrounds/ -type f | shuf -n 1) fill
 
 workspace 1 output HDMI-A-4
 workspace 3 output HDMI-A-4
