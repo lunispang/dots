@@ -3,27 +3,31 @@ set $mod Mod4
 font pango:JetBrains Mono 11px
 
 input * {
-	xkb_layout dvp,us,se
-	xkb_variant ,,dvorak
-	xkb_options "caps:swapescape,grp:win_space_toggle"
+	xkb_layout dvp,us,se,se
+	xkb_variant ,,dvorak,
+	# xkb_options "caps:swapescape,grp:win_space_toggle"
+	xkb_options "grp:win_space_toggle"
 }
 
-output DP-1 pos 0 0
-output HDMI-A-1 pos 1920 0
+output DP-4 pos 0 0
+output HDMI-A-4 pos 1920 0
 
 seat seat0 xcursor_theme 'BreezeX-RosePine-Linux'
+
+exec_always --no-startup-id "killall bash watchdog; bash ~/.config/sway/watchdog.sh"
+
 exec --no-startup-id nm-applet
 
-output HDMI-A-1 bg $(find ~/porn -type f | shuf -n 1) fill
-output DP-1 bg $(find ~/porn -type f | shuf -n 1) fill
+output HDMI-A-4 bg $(find ~/backgrounds -type f | shuf -n 1) fill
+output DP-4 bg $(find ~/backgrounds -type f | shuf -n 1) fill
 
-workspace 1 output HDMI-A-1
-workspace 3 output HDMI-A-1
-workspace 5 output HDMI-A-1
+workspace 1 output HDMI-A-4
+workspace 3 output HDMI-A-4
+workspace 5 output HDMI-A-4
 
-workspace 2 output DP-1
-workspace 4 output DP-1
-workspace 6 output DP-1
+workspace 2 output DP-4
+workspace 4 output DP-4
+workspace 6 output DP-4
 
 # Use pactl to adjust volume in PulseAudio.
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
@@ -36,7 +40,7 @@ floating_modifier Mod4
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
-tiling_drag titlebar
+tiling_drag enabled
 
 # start a terminal
 bindsym $mod+Return exec kitty
@@ -198,3 +202,4 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status --config ~/.config/i3/status.conf
 }
+
