@@ -7,6 +7,7 @@ input * {
 	xkb_variant ,,dvorak,
 	# xkb_options "caps:swapescape,grp:win_space_toggle"
 	xkb_options "grp:win_space_toggle"
+	accel_profile "flat"
 }
 
 output DP-4 pos 0 0
@@ -196,6 +197,30 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
+
+mode "photo" {
+	bindsym a focus left
+	bindsym u focus right
+	bindsym o focus down
+	bindsym e focus up
+
+	bindsym Shift+a move left
+	bindsym Shift+u move right
+	bindsym Shift+o move down
+	bindsym Shift+e move up
+
+	bindsym p exec ~/photo.sh
+	bindsym Semicolon kill
+
+	bindsym Apostrophe split h
+	bindsym q split v
+	bindsym j fullscreen toggle
+	bindsym k layout toggle split
+
+	bindsym Escape mode "default"
+}
+
+bindsym $mod+minus mode "photo"
 
 # Start swaybar to display a workspace bar (plus the system information swaystatus
 # finds out, if available)
